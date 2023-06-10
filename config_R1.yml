@@ -1,0 +1,97 @@
+---
+
+- hosts: routers
+  become: true
+  gather_facts: no
+  tasks: 
+  
+    - name: Apply the provided configuration
+      cisco.ios.ios_hostname:
+        config:
+          hostname: R1
+        state: merged
+
+    - name: configuring login banner
+      cisco.ios.ios_banner:
+        banner: motd
+        text: |
+          Unauthorized Personels are Prohibited!
+        state: present
+   
+    - name: configuring domain name
+      cisco.ios.ios_system:
+        domain_name: www.tip.edu.ph
+        state: present
+
+    - name: configuring line con 0
+      cisco.ios.ios_config:
+        lines:
+        - password cisco
+        - login
+        - logging synchronous 
+        parents: line console 0
+
+    - name: configuring privilege exec mode password 
+      cisco.ios.ios_config:
+        lines: enable secret class
+
+    - name: saving running config to startup config
+      cisco.ios.ios_config:
+        save_when: modified 
+   
+    - name: configuring ip address in f2/0
+      cisco.ios.ios_config:
+        lines:
+        - description R1_TO_NETWORK_192.168.1.0/24
+        - ip address 192.168.1.1 255.255.255.0
+        - no shutdown
+        parents: interface FastEthernet2/0
+
+    # implementing security
+    - name: configuring service password-encryption
+      cisco.ios.ios_config:
+        lines:
+        - service password-encryption
+
+    - name: Shutdown interfaces
+      cisco.ios.ios_config:
+        lines: 
+          - shutdown
+        parents: "interface {{ item }}"
+      with_items:
+        - ATM1/0
+        - FastEthernet3/0 
+        - FastEthernet3/1 
+        - GigabitEthernet4/0 
+        - Serial5/0
+        - Serial5/1
+        - Serial5/2
+        - Serial5/3
+        - Serial6/0
+        - Serial6/1
+        - Serial6/2
+        - Serial6/3
+        - Serial6/4
+        - Serial6/5
+        - Serial6/6
+        - Serial6/7
+
+    # access list
+    - name: configuring extended access list
+      cisco.ios.ios_config:
+        lines:
+        - access-list 100 permit tcp host 192.168.56.109 any eq 22
+
+    # displaying current config
+    - block:
+
+      - name: checking hostname
+        cisco.ios.ios_command:
+          commands: show run 
+        register: output_run
+
+      - debug: 
+          msg="{{ output_run }}"
+
+
+

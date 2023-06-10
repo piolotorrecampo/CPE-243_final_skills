@@ -1,0 +1,415 @@
+May 15 20:02:39 client useradd[647]: new group: name=client, GID=1000
+May 15 20:02:39 client useradd[647]: new user: name=client, UID=1000, GID=1000, home=/home/client, shell=/bin/bash, from=none
+May 15 20:02:39 client useradd[647]: add 'client' to group 'adm'
+May 15 20:02:39 client useradd[647]: add 'client' to group 'cdrom'
+May 15 20:02:39 client useradd[647]: add 'client' to group 'sudo'
+May 15 20:02:39 client useradd[647]: add 'client' to group 'dip'
+May 15 20:02:39 client useradd[647]: add 'client' to group 'plugdev'
+May 15 20:02:39 client useradd[647]: add 'client' to group 'lxd'
+May 15 20:02:39 client useradd[647]: add 'client' to shadow group 'adm'
+May 15 20:02:39 client useradd[647]: add 'client' to shadow group 'cdrom'
+May 15 20:02:39 client useradd[647]: add 'client' to shadow group 'sudo'
+May 15 20:02:39 client useradd[647]: add 'client' to shadow group 'dip'
+May 15 20:02:39 client useradd[647]: add 'client' to shadow group 'plugdev'
+May 15 20:02:39 client useradd[647]: add 'client' to shadow group 'lxd'
+May 15 20:02:39 client systemd-logind[675]: New seat seat0.
+May 15 20:02:39 client systemd-logind[675]: Watching system buttons on /dev/input/event0 (Power Button)
+May 15 20:02:39 client systemd-logind[675]: Watching system buttons on /dev/input/event1 (Sleep Button)
+May 15 20:02:39 client systemd-logind[675]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+May 15 20:02:45 client sshd[792]: Server listening on 0.0.0.0 port 22.
+May 15 20:02:45 client sshd[792]: Server listening on :: port 22.
+May 15 20:02:58 client login[685]: pam_unix(login:session): session opened for user client(uid=1000) by LOGIN(uid=0)
+May 15 20:02:58 client systemd-logind[675]: New session 1 of user client.
+May 15 20:02:58 client systemd: pam_unix(systemd-user:session): session opened for user client(uid=1000) by (uid=0)
+May 15 20:03:14 client useradd[1261]: new user: name=lxd, UID=999, GID=100, home=/var/snap/lxd/common/lxd, shell=/bin/false, from=none
+May 15 20:03:25 client sshd[792]: Received signal 15; terminating.
+May 15 20:03:25 client sshd[1442]: Server listening on 0.0.0.0 port 22.
+May 15 20:03:25 client sshd[1442]: Server listening on :: port 22.
+May 15 20:03:29 client sshd[1434]: Accepted password for client from 192.168.56.1 port 42272 ssh2
+May 15 20:03:29 client sshd[1434]: pam_unix(sshd:session): session opened for user client(uid=1000) by (uid=0)
+May 15 20:03:29 client systemd-logind[675]: New session 3 of user client.
+May 15 20:03:32 client sshd[1518]: Received disconnect from 192.168.56.1 port 42272:11: disconnected by user
+May 15 20:03:32 client sshd[1518]: Disconnected from user client 192.168.56.1 port 42272
+May 15 20:03:32 client sshd[1434]: pam_unix(sshd:session): session closed for user client
+May 15 20:03:32 client systemd-logind[675]: Session 3 logged out. Waiting for processes to exit.
+May 15 20:03:32 client systemd-logind[675]: Removed session 3.
+May 15 20:03:52 client sshd[1533]: Connection closed by authenticating user client 192.168.56.1 port 46990 [preauth]
+May 15 20:03:52 client sshd[1535]: Connection closed by authenticating user client 192.168.56.1 port 47000 [preauth]
+May 15 20:03:56 client sshd[1537]: Accepted password for client from 192.168.56.1 port 47016 ssh2
+May 15 20:03:56 client sshd[1537]: pam_unix(sshd:session): session opened for user client(uid=1000) by (uid=0)
+May 15 20:03:56 client systemd-logind[675]: New session 4 of user client.
+May 15 20:03:56 client sshd[1584]: Received disconnect from 192.168.56.1 port 47016:11: disconnected by user
+May 15 20:03:56 client sshd[1584]: Disconnected from user client 192.168.56.1 port 47016
+May 15 20:03:56 client sshd[1537]: pam_unix(sshd:session): session closed for user client
+May 15 20:03:56 client systemd-logind[675]: Session 4 logged out. Waiting for processes to exit.
+May 15 20:03:56 client systemd-logind[675]: Removed session 4.
+May 15 20:04:03 client sshd[1589]: Accepted publickey for client from 192.168.56.1 port 45808 ssh2: RSA SHA256:CoVmLPUdIqFuE92LtAxvayrYE52ZQRxZhbYPEvHjK/U
+May 15 20:04:03 client sshd[1589]: pam_unix(sshd:session): session opened for user client(uid=1000) by (uid=0)
+May 15 20:04:03 client systemd-logind[675]: New session 5 of user client.
+May 15 20:04:06 client sshd[1645]: Received disconnect from 192.168.56.1 port 45808:11: disconnected by user
+May 15 20:04:06 client sshd[1645]: Disconnected from user client 192.168.56.1 port 45808
+May 15 20:04:06 client sshd[1589]: pam_unix(sshd:session): session closed for user client
+May 15 20:04:06 client systemd-logind[675]: Session 5 logged out. Waiting for processes to exit.
+May 15 20:04:06 client systemd-logind[675]: Removed session 5.
+May 15 20:04:26 client sudo:   client : TTY=tty1 ; PWD=/home/client ; USER=root ; COMMAND=/usr/bin/apt update
+May 15 20:04:26 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:04:30 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:04:34 client sudo:   client : TTY=tty1 ; PWD=/home/client ; USER=root ; COMMAND=/usr/bin/apt upgrade
+May 15 20:04:34 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:17:01 client CRON[4798]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+May 15 20:17:01 client CRON[4798]: pam_unix(cron:session): session closed for user root
+May 15 20:17:34 client groupadd[5188]: group added to /etc/group: name=fwupd-refresh, GID=118
+May 15 20:17:34 client groupadd[5188]: group added to /etc/gshadow: name=fwupd-refresh
+May 15 20:17:34 client groupadd[5188]: new group: name=fwupd-refresh, GID=118
+May 15 20:17:34 client useradd[5194]: new user: name=fwupd-refresh, UID=113, GID=118, home=/run/systemd, shell=/usr/sbin/nologin, from=/dev/pts/1
+May 15 20:17:35 client usermod[5201]: change user 'fwupd-refresh' password
+May 15 20:17:36 client chage[5208]: changed password expiry for fwupd-refresh
+May 15 20:17:36 client chfn[5212]: changed user 'fwupd-refresh' information
+May 15 20:20:45 client sshd[15988]: Accepted publickey for client from 192.168.56.1 port 50320 ssh2: RSA SHA256:CoVmLPUdIqFuE92LtAxvayrYE52ZQRxZhbYPEvHjK/U
+May 15 20:20:45 client sshd[15988]: pam_unix(sshd:session): session opened for user client(uid=1000) by (uid=0)
+May 15 20:20:45 client systemd-logind[675]: New session 7 of user client.
+May 15 20:20:48 client sudo:   client : TTY=pts/1 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-bbgyohhgycskjbbhjuetkrvdmwhmjoos ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182047.213786-769647-163848784791714/AnsiballZ_setup.py'
+May 15 20:20:49 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:20:54 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:20:55 client sudo:   client : TTY=pts/1 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-cxozcjqqbstnqypvvhnjuxwcsppxnidd ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182054.6771379-769963-201015224878993/AnsiballZ_command.py'
+May 15 20:20:55 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:20:55 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:20:59 client sshd[1442]: Received signal 15; terminating.
+May 15 20:20:59 client sshd[16169]: Server listening on 0.0.0.0 port 22.
+May 15 20:20:59 client sshd[16169]: Server listening on :: port 22.
+May 15 20:21:03 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:21:06 client systemd-logind[675]: System is rebooting.
+May 15 20:21:49 client systemd-logind[664]: New seat seat0.
+May 15 20:21:49 client systemd-logind[664]: Watching system buttons on /dev/input/event0 (Power Button)
+May 15 20:21:49 client systemd-logind[664]: Watching system buttons on /dev/input/event1 (Sleep Button)
+May 15 20:21:49 client systemd-logind[664]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+May 15 20:21:51 client sshd[708]: Server listening on 0.0.0.0 port 22.
+May 15 20:21:51 client sshd[708]: Server listening on :: port 22.
+May 15 20:26:10 client sshd[851]: Accepted publickey for client from 192.168.56.1 port 58548 ssh2: RSA SHA256:CoVmLPUdIqFuE92LtAxvayrYE52ZQRxZhbYPEvHjK/U
+May 15 20:26:10 client sshd[851]: pam_unix(sshd:session): session opened for user client(uid=1000) by (uid=0)
+May 15 20:26:10 client systemd-logind[664]: New session 1 of user client.
+May 15 20:26:10 client systemd: pam_unix(systemd-user:session): session opened for user client(uid=1000) by (uid=0)
+May 15 20:26:16 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-xmjffeklkuidvjuakzfblmiaybrwlgkl ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182375.0800817-779718-281064562261700/AnsiballZ_setup.py'
+May 15 20:26:16 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:26:18 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:26:19 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-xvoqzkhxlusnljjllhruakqeebkoakvr ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182379.4154878-780003-161128169766450/AnsiballZ_command.py'
+May 15 20:26:19 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:26:20 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:26:21 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-djbuixmnhyeyjvayvzbryvkskhnamayi ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182380.6733139-780050-119598938323782/AnsiballZ_apt.py'
+May 15 20:26:21 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:26:32 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:26:33 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-xdfoysohappyqyfeazupmkpkvacbucvz ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182393.1542487-780431-248356358474991/AnsiballZ_apt.py'
+May 15 20:26:33 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:26:34 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:26:35 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-ulbmmoakcramtuvlaiqqbfpmwhndhcba ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182395.0654259-780497-123272236668682/AnsiballZ_group.py'
+May 15 20:26:35 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:26:36 client groupadd[1512]: group added to /etc/group: name=admin, GID=1001
+May 15 20:26:36 client groupadd[1512]: group added to /etc/gshadow: name=admin
+May 15 20:26:36 client groupadd[1512]: new group: name=admin, GID=1001
+May 15 20:26:36 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:26:37 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-xorgxsxgkxnqpjsskvfxeqtozlxxmwht ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182396.8134909-780572-224741841978429/AnsiballZ_user.py'
+May 15 20:26:37 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:26:37 client useradd[1542]: new user: name=admin, UID=1001, GID=1001, home=/home/admin, shell=/bin/bash, from=/dev/pts/1
+May 15 20:26:39 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:26:39 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-reciywgkvtuvuwxahvpppygfcpabeotc ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182399.5364802-780647-146199466799196/AnsiballZ_authorized_key.py'
+May 15 20:26:39 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:26:40 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:26:40 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-cjwlaoswudqxaataltmgdsucxegpqecn ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182400.4176543-780689-79105984316088/AnsiballZ_stat.py'
+May 15 20:26:40 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:26:41 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:26:41 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-kegokxxurpdihpryylwaemdbazwzxsuh ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182400.4176543-780689-79105984316088/AnsiballZ_copy.py'
+May 15 20:26:41 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:26:41 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:26:42 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-asrfuandybdproanusoaxhxldvpibhoe ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182401.8817954-780743-267735198673328/AnsiballZ_stat.py'
+May 15 20:26:42 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:26:42 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:26:42 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-bdvbuokgtzgbymmxtpfjmwvrpfjfbrsf ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182401.8817954-780743-267735198673328/AnsiballZ_copy.py'
+May 15 20:26:42 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:26:42 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:26:43 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-agffmrwwsytndmotthdwscspukzfidgo ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182403.0296452-780793-191630937529031/AnsiballZ_apt.py'
+May 15 20:26:43 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:28:00 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:28:01 client sshd[849]: fatal: Timeout before authentication for 192.168.56.1 port 40774
+May 15 20:28:01 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-fqxtxthrryrblqzomwbscgbwuznrpqtc ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182480.5973485-783176-142201464851375/AnsiballZ_firewalld.py'
+May 15 20:28:01 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:28:02 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:28:02 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-ubrcknvwbotisgjbkghdzgoftixcvxrx ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182482.1849186-783223-248681853791618/AnsiballZ_firewalld.py'
+May 15 20:28:02 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:28:03 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:28:03 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-mnovptzbwtyhpctyifkkqnvbnswhvfvf ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182483.072969-783223-201144669723773/AnsiballZ_firewalld.py'
+May 15 20:28:03 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:28:03 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:28:03 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-hjskbcytshxliplthaojorfdqhceooxz ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182483.825002-783223-140976733485239/AnsiballZ_firewalld.py'
+May 15 20:28:03 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:28:04 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:28:04 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-xmfnmjqkxqbtbeodnwncfkgewqftdttp ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182484.627864-783329-277405285124620/AnsiballZ_firewalld.py'
+May 15 20:28:04 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:28:05 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:28:05 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-rljgpabikxpeavflaitagvlbvjdenwpx ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182485.4091616-783354-234521052877511/AnsiballZ_apt.py'
+May 15 20:28:05 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:28:17 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:28:18 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-qklcstjwcdlumddplmbnmxzmesumroat ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182497.8495605-783744-19839183885881/AnsiballZ_systemd.py'
+May 15 20:28:18 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:28:18 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:28:19 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-ectjuqnwkybkgphssqlgqhbrbreebrfy ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182498.957002-783744-215600208049456/AnsiballZ_systemd.py'
+May 15 20:28:19 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:28:19 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:28:19 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-gughvxmqksvjbvhzowbxyuzlmnaedazg ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182499.673041-783813-210040112562109/AnsiballZ_stat.py'
+May 15 20:28:19 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:28:20 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:28:20 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-szzjuhlmfuphatmtnogcxlmtjhteerrv ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182499.673041-783813-210040112562109/AnsiballZ_copy.py'
+May 15 20:28:20 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:28:20 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:28:20 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-ufucxfdfrxlytjhvnuxbsnowgmuiyhkp ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182500.58397-783862-55966597879733/AnsiballZ_stat.py'
+May 15 20:28:20 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:28:20 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:28:21 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-ouvmclxffaoldbkrbmjtjltmbpylcxxj ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182500.58397-783862-55966597879733/AnsiballZ_copy.py'
+May 15 20:28:21 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:28:21 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:28:21 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-eygzvjkmvlucbbbobtnomdshfdwewnjz ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182501.4848807-783862-124216526969421/AnsiballZ_stat.py'
+May 15 20:28:21 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:28:21 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:28:22 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-uaraxumjzpfuupsitzfrtgetrtlfueme ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182501.4848807-783862-124216526969421/AnsiballZ_copy.py'
+May 15 20:28:22 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:28:22 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:28:22 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-axmkzmltlsblzmnsmgsdfmhubftzntht ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182502.439438-783958-276394580505748/AnsiballZ_apt.py'
+May 15 20:28:22 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:29:06 client groupadd[2571]: group added to /etc/group: name=snort, GID=119
+May 15 20:29:06 client groupadd[2571]: group added to /etc/gshadow: name=snort
+May 15 20:29:06 client groupadd[2571]: new group: name=snort, GID=119
+May 15 20:29:06 client useradd[2581]: new user: name=snort, UID=114, GID=119, home=/home/snort, shell=/usr/sbin/nologin, from=/dev/pts/2
+May 15 20:29:07 client usermod[2588]: change user 'snort' password
+May 15 20:29:08 client chage[2595]: changed password expiry for snort
+May 15 20:29:08 client usermod[2599]: change user 'snort' home from '/home/snort' to '/var/log/snort'
+May 15 20:32:09 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:09 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-xcwilajdwryumxuidzgsizbeqahdedzv ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182729.2772694-790874-8524312334941/AnsiballZ_systemd.py'
+May 15 20:32:09 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:10 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:10 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-bvevznjkyltfxuivqjjedewkdazekcfi ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182730.003073-790907-35656979291955/AnsiballZ_systemd.py'
+May 15 20:32:10 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:10 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:10 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-prxbfbxtshiwyxjsgkgozjpnqaedwipi ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182730.727529-790944-237241590057497/AnsiballZ_apt.py'
+May 15 20:32:10 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:12 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:12 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-gmrgwgcfwaftrwrtlsnzilaribopougg ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182732.1877074-790992-87541928822270/AnsiballZ_file.py'
+May 15 20:32:12 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:12 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:13 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-etctqwpgefoqgahnbgcplvjttuqbmtcd ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182732.8750198-790992-111435223912319/AnsiballZ_file.py'
+May 15 20:32:13 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:13 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:13 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-urowrbyrepauhkjedwzhmbwuokfwreae ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182733.3259418-790992-246297794315743/AnsiballZ_file.py'
+May 15 20:32:13 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:13 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:13 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-ldgdxslisjmakvpumvvltdpkjppzpsgv ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182733.7946882-790992-209754938263607/AnsiballZ_file.py'
+May 15 20:32:13 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:14 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:14 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-csitdetfzyqxavbrnchdcoqnttjgsxhj ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182734.3053412-791088-91053312976270/AnsiballZ_command.py'
+May 15 20:32:14 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:14 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:14 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-zhrokakvigxpdnuclffokynfftvdnwcp ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182734.7618845-791097-206041755304905/AnsiballZ_stat.py'
+May 15 20:32:14 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:15 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:15 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-hdelrrfevyxbtfgyqgcunixpjfwopmsm ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182734.7618845-791097-206041755304905/AnsiballZ_copy.py'
+May 15 20:32:15 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:15 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:16 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-illebycolrafpmwiohtztcfqprgrrqbn ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182735.6745772-791146-270310624102157/AnsiballZ_openssl_privatekey.py'
+May 15 20:32:16 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:17 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:17 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-oidpdyhrdvwolzfpbwpdmckqxihmqxuw ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182737.286589-791222-39439197364046/AnsiballZ_x509_certificate.py'
+May 15 20:32:17 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:18 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:18 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-qeiclkninneqydqpmkbdrljeyvrlhmql ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182738.6544864-791264-18784981096108/AnsiballZ_x509_certificate.py'
+May 15 20:32:18 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:21 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:21 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-alttrlncemzkyogtxmowkgkwvpucxwbr ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182739.5624852-791306-120150053325834/AnsiballZ_file.py'
+May 15 20:32:21 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:21 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:21 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-hpdetsjkpvfrjpohvzwzmwalgjfraggb ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182740.3770728-791320-65248338634281/AnsiballZ_slurp.py'
+May 15 20:32:21 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:21 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:21 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-vlitnssjfwrbykmulyflibsqthdejnan ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182741.0676553-791320-30534614295708/AnsiballZ_slurp.py'
+May 15 20:32:21 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:21 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:21 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-exfdwpxwyxbneftwlouazghhcbhydzwu ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182741.6057856-791320-65106648644586/AnsiballZ_slurp.py'
+May 15 20:32:21 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:22 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:22 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-lcnzuwhcrxrybtgjoqwaayyhkzamweqn ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182742.0620904-791320-2965864529024/AnsiballZ_slurp.py'
+May 15 20:32:22 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:22 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:22 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-yuakpwsiamzuryittombclzdtkclxnvz ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182742.4923942-791320-176737025647182/AnsiballZ_slurp.py'
+May 15 20:32:22 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:23 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:23 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-pgjmxmnvactffkbkpphstchnsrqdrbkt ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182743.2966135-791320-185019263783798/AnsiballZ_slurp.py'
+May 15 20:32:23 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:23 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:23 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-hxqcqgkqrgcqlgitaqipoqftcqzsvrmt ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182743.75153-791320-120719710108617/AnsiballZ_slurp.py'
+May 15 20:32:23 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:24 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:24 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-kyieyllgavvpzqxfdxhfysujuvjjmtzq ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182744.1899173-791320-241843617007218/AnsiballZ_slurp.py'
+May 15 20:32:24 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:24 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:24 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-xztnudohbtemnxwvcnxxeulxwlxnjubp ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182744.6143005-791320-138919407263443/AnsiballZ_slurp.py'
+May 15 20:32:24 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:25 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:25 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-tmhsydxdnlalqvmkfaibvekczhaqajuf ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182745.1153126-791320-274299201090538/AnsiballZ_slurp.py'
+May 15 20:32:25 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:25 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:25 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-cdlanurumzerlicxmwmnywhctwhcdpaj ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182745.5647998-791320-269479544249188/AnsiballZ_slurp.py'
+May 15 20:32:25 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:26 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:26 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-wfvjotggwpaasvcsrfbvkbqxdvlgcjzc ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182746.2480023-791320-229984259205468/AnsiballZ_slurp.py'
+May 15 20:32:26 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:26 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:26 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-dilzpofywegjushgexjtdamvnsrivoum ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182746.6738598-791320-30824215192249/AnsiballZ_slurp.py'
+May 15 20:32:26 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:27 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:27 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-qdnhqyzytckduwqexrjnydedytxlklsz ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182747.0940285-791320-59754914330050/AnsiballZ_slurp.py'
+May 15 20:32:27 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:27 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:27 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-jgbnuotzkecuasbgyfofdwaoibftssvj ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182747.5498023-791320-123501096995113/AnsiballZ_slurp.py'
+May 15 20:32:27 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:27 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:28 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-dgcarbrwjpgqxiofothabmdwupywpqba ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182748.0058525-791320-78570943079950/AnsiballZ_slurp.py'
+May 15 20:32:28 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:28 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:32:28 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-qguxdvdxkkjioacggcshgnncssznwaah ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684182748.470259-791320-21450553541815/AnsiballZ_slurp.py'
+May 15 20:32:28 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:32:28 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:33:28 client sshd[955]: Received disconnect from 192.168.56.1 port 58548:11: disconnected by user
+May 15 20:33:28 client sshd[955]: Disconnected from user client 192.168.56.1 port 58548
+May 15 20:33:28 client sshd[851]: pam_unix(sshd:session): session closed for user client
+May 15 20:33:28 client systemd-logind[664]: Session 1 logged out. Waiting for processes to exit.
+May 15 20:33:28 client systemd-logind[664]: Removed session 1.
+May 15 20:33:38 client systemd: pam_unix(systemd-user:session): session closed for user client
+May 15 20:36:50 client sshd[4009]: Accepted publickey for client from 192.168.56.1 port 34718 ssh2: RSA SHA256:CoVmLPUdIqFuE92LtAxvayrYE52ZQRxZhbYPEvHjK/U
+May 15 20:36:50 client sshd[4009]: pam_unix(sshd:session): session opened for user client(uid=1000) by (uid=0)
+May 15 20:36:50 client systemd-logind[664]: New session 3 of user client.
+May 15 20:36:50 client systemd: pam_unix(systemd-user:session): session opened for user client(uid=1000) by (uid=0)
+May 15 20:36:52 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-iybswccghmyrionwonkmrlmjqbivugjx ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183011.4518578-799128-3756694634568/AnsiballZ_setup.py'
+May 15 20:36:52 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:36:53 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:36:53 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-kohydxsdulxuffswhlfpjkxzdcfdcchm ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183013.6435225-799241-245217339132665/AnsiballZ_command.py'
+May 15 20:36:53 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:36:54 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:36:55 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-dpupyriqdasxdygdyjzqoacqzmkrmqai ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183014.7075639-799283-120703631692953/AnsiballZ_apt.py'
+May 15 20:36:55 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:14 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:17 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-tivoujecmgxhveiolmlsdibmfcojpdai ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183034.2653916-799897-249214085280183/AnsiballZ_apt.py'
+May 15 20:37:17 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:17 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:17 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-smlsneizoiqidkciohqemuvtkndnocbw ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183036.6446152-799981-225482134276524/AnsiballZ_group.py'
+May 15 20:37:17 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:17 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:17 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-xkuqhwcwkkvwhkvylkikqhiweajifssj ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183037.490035-800023-145067055294421/AnsiballZ_user.py'
+May 15 20:37:17 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:18 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:18 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-gdvxtftryysflbicmqwfpvmgdovztuyh ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183038.3440769-800037-144978545167144/AnsiballZ_authorized_key.py'
+May 15 20:37:18 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:19 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:19 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-wkosbjenmkczgwhqmfrrvjuraewwmztg ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183039.1801074-800074-211844926473562/AnsiballZ_stat.py'
+May 15 20:37:19 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:19 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:20 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-ozjrwgirunbikbyeckegzcadevqahgqw ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183039.1801074-800074-211844926473562/AnsiballZ_file.py'
+May 15 20:37:20 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:20 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:20 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-ilzviacjyrxwsgwdfezcrqeutrwmltfl ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183040.4434474-800125-84388046334937/AnsiballZ_stat.py'
+May 15 20:37:20 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:20 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:20 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-bpiurbhzrltcvlofbgzyicjvzecypile ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183040.4434474-800125-84388046334937/AnsiballZ_file.py'
+May 15 20:37:20 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:21 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:21 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-zaagsrzilakahcpcnzicxkzcqdutizdn ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183041.3227592-800171-222814070353428/AnsiballZ_apt.py'
+May 15 20:37:21 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:22 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:23 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-twypyqwzzaqcxkwnabtaxmiazcqxhbtb ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183042.7916093-800213-91015337979638/AnsiballZ_firewalld.py'
+May 15 20:37:23 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:23 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:23 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-mbbzxpkucwwfvnetiasmpfpkqdenoajq ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183043.7154362-800255-248404486694781/AnsiballZ_firewalld.py'
+May 15 20:37:23 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:24 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:24 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-rglqkquixvsvculaulkdabjsqtmeibaa ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183044.4477837-800255-240110640742879/AnsiballZ_firewalld.py'
+May 15 20:37:24 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:25 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:25 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-uaggvitltfcxbekchrnkwozdiefgywlm ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183045.1246905-800255-113646733005488/AnsiballZ_firewalld.py'
+May 15 20:37:25 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:25 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:25 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-czxsshtgredazjrvalhyknuqihwvokan ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183045.851792-800344-162464574189271/AnsiballZ_firewalld.py'
+May 15 20:37:25 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:26 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:26 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-uyyskymhykqjjuphsotlvxoznkxhczuu ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183046.6255012-800386-14238627237086/AnsiballZ_apt.py'
+May 15 20:37:26 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:27 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:28 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-jvvjtdzqhgcwshjzcqzzrbhthhutwkwt ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183047.7395842-800429-95543459293976/AnsiballZ_systemd.py'
+May 15 20:37:28 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:28 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:28 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-ouectusdjdtcfycjwazjcxphlcnfqdig ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183048.843366-800429-110889787800451/AnsiballZ_systemd.py'
+May 15 20:37:28 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:29 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:29 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-qlphbmsepzilwplgpndnkhcycobtwuxk ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183049.5378947-800483-111322421348746/AnsiballZ_stat.py'
+May 15 20:37:29 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:29 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:30 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-mqwfxzaheinwvyexgrwylpqnkyqyjrcq ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183049.5378947-800483-111322421348746/AnsiballZ_file.py'
+May 15 20:37:30 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:30 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:30 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-emdfjxniwvrppdjvlhlgnplstcvoqxic ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183050.4181263-800529-90211563111668/AnsiballZ_stat.py'
+May 15 20:37:30 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:30 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:30 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-ijxwyhlvdzwzngxobiauiclyrteobicc ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183050.4181263-800529-90211563111668/AnsiballZ_file.py'
+May 15 20:37:30 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:31 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:31 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-wrkaocupresrkdgncjbuaqvvpvsjcgdx ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183051.258519-800529-224885044445291/AnsiballZ_stat.py'
+May 15 20:37:31 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:31 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:31 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-euneiypstrjhfygxipdeywrhqnlwqkpf ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183051.258519-800529-224885044445291/AnsiballZ_file.py'
+May 15 20:37:31 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:32 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:32 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-maqerdvjilbbrnfjvydpcflubczrsapd ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183052.1561818-800614-111340865893330/AnsiballZ_apt.py'
+May 15 20:37:32 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:33 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:33 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-uqwckcefgjusvgxghnsfrnbmutijtcul ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183053.605743-800661-156959016914262/AnsiballZ_systemd.py'
+May 15 20:37:33 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:34 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:34 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-kvcaptvklwqrvhhqczdpwcowwosxpnmj ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183054.343691-800699-257040347468866/AnsiballZ_systemd.py'
+May 15 20:37:34 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:34 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:35 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-kdlhcikpedsuqnexdexucbsfldjhmzzj ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183055.0286841-800713-217712689389832/AnsiballZ_apt.py'
+May 15 20:37:35 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:36 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:36 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-lsoaddijbawdayekvsaqshcgwzfphbbb ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183056.5221283-800788-209421194022421/AnsiballZ_file.py'
+May 15 20:37:36 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:36 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:37 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-hwxjqkjzryaxuhqitupablhufbsvxsqk ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183056.9671338-800788-168136178025633/AnsiballZ_file.py'
+May 15 20:37:37 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:37 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:37 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-zyxuozkvvryyruwvdtybqemtmaydytew ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183057.4302132-800788-209068360797239/AnsiballZ_file.py'
+May 15 20:37:37 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:37 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:38 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-slczyxvqfbwzutktmijuaotqeqsodbsc ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183057.892992-800788-103315341583462/AnsiballZ_file.py'
+May 15 20:37:38 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:38 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:38 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-bbfpfxfxumyyozukrfwzxsvjbioxwsix ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183058.3703225-800851-71626467940966/AnsiballZ_command.py'
+May 15 20:37:38 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:38 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:38 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-ptarbgwezafjdrnhpespsnjamyikigvo ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183058.867149-800893-223126948802912/AnsiballZ_stat.py'
+May 15 20:37:38 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:39 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:39 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-suhjyzsdrokgmxfkdcgahouxjbcdztnx ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183058.867149-800893-223126948802912/AnsiballZ_file.py'
+May 15 20:37:39 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:39 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:40 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-jvcoorctlyxfqbzpzoixqzhdrgtaohyz ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183059.7630076-800939-139228645770530/AnsiballZ_openssl_privatekey.py'
+May 15 20:37:40 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:40 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:41 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-vozmawxqxhwynbiuwkgcgudbonlgmvqd ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183060.9519496-800981-263569535343901/AnsiballZ_x509_certificate.py'
+May 15 20:37:41 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:42 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:42 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-rkhnbqassczgdwxenxngcsgvxycfoxbi ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183062.1746678-801023-90579365923541/AnsiballZ_x509_certificate.py'
+May 15 20:37:42 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:42 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:43 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-tmimugsjcjjhvkftwphnrbqhsllbuuga ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183063.0799716-801054-110377068992802/AnsiballZ_file.py'
+May 15 20:37:43 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:43 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:43 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-rztpxlnoulaluonxnrgqpypdvprcstbu ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183063.5674028-801074-228525257891038/AnsiballZ_slurp.py'
+May 15 20:37:43 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)
+May 15 20:37:44 client sudo: pam_unix(sudo:session): session closed for user root
+May 15 20:37:44 client sudo:   client : TTY=pts/0 ; PWD=/home/client ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-ccogwpgrrvdhytkmgfhxkncfsblrxgci ; /usr/bin/python3 /home/client/.ansible/tmp/ansible-tmp-1684183064.2072797-801074-237994727881410/AnsiballZ_slurp.py'
+May 15 20:37:44 client sudo: pam_unix(sudo:session): session opened for user root(uid=0) by client(uid=1000)

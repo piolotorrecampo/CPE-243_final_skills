@@ -1,0 +1,234 @@
+---
+
+- hosts: all
+  become: true
+  vars: 
+    allowed_ssh_networks: 
+      - 192.168.56.0/24
+      - 192.168.254.0/24
+      - 10.0.3.0/24
+    unnecessary_services:
+      - postfix 
+      - telnet 
+    unnecessary_software:
+      - tcpdump 
+      - nmap-ncat 
+      - wpa_supplicant
+
+  pre_tasks:
+
+    - name: Dpkg fixing in ubuntu servers
+      shell: |
+        dpkg --configure -a
+      when: ansible_distribution == "Ubuntu"
+
+    - name: Updating Ubuntu
+      apt:
+        update_cache: yes
+      when: ansible_distribution == "Ubuntu"
+  
+  tasks: 
+    # SECURING END DEVICE
+    - name: Perform full patching 
+      package: 
+        name: '*'
+        state: latest
+
+    - name: Add admin group 
+      group:
+        name: admin 
+        state: present 
+
+    - name: Add local user 
+      user: 
+        name: admin 
+        group: admin 
+        shell: /bin/bash 
+        home: /home/admin 
+        create_home: yes 
+        state: present 
+
+    - name: Add SSH public key for user 
+      authorized_key: 
+        user: admin 
+        key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}" 
+        state: present 
+
+    - name: Add sudoer role for local user 
+      copy: 
+        dest: /etc/sudoers.d/admin 
+        src: etc/sudoers.d/admin 
+        owner: root 
+        group: root 
+        mode: 0440 
+        validate: /usr/sbin/visudo -csf %s 
+
+    - name: Add hardened SSH config
+      copy: 
+        dest: /etc/ssh/sshd_config 
+        src: etc/ssh/sshd_config 
+        owner: root 
+        group: root 
+        mode: 0600 
+      notify: Reload SSH 
+
+    - name: Installing firewalld in ubuntu
+      apt:
+        name: firewalld
+        state: present
+      when: ansible_distribution == "Ubuntu"
+
+    - name: Add SSH port to internal zone 
+      firewalld: 
+        zone: internal 
+        service: ssh 
+        state: enabled 
+        immediate: yes 
+        permanent: yes 
+
+    - name: Add permitted networks to internal zone
+      firewalld: 
+        zone: internal 
+        source: "{{ item }}" 
+        state: enabled 
+        immediate: yes 
+        permanent: yes 
+      with_items: "{{ allowed_ssh_networks }}"
+
+    - name: Drop ssh from the public zone 
+      firewalld: 
+        zone: public 
+        service: ssh 
+        state: disabled 
+        immediate: yes 
+        permanent: yes 
+
+    - name: Remove undesirable packages 
+      package:
+        name: "{{ unnecessary_software }}" 
+        state: absent 
+
+    - name: Stop and disable unnecessary services 
+      service: 
+        name: "{{ item }}"
+        state: stopped 
+        enabled: no 
+      with_items: "{{ unnecessary_services }}" 
+      ignore_errors: yes 
+
+    - name: Set a message of the day 
+      copy: 
+        dest: /etc/motd 
+        src: etc/motd 
+        owner: root 
+        group: root 
+        mode: 0644 
+    
+    - name: Set a login hammer 
+      copy: 
+        dest: "{{ item }}" 
+        src: etc/issue 
+        owner: root 
+        group: root 
+        mode: 0644 
+      with_items: 
+        - /etc/issue 
+        - /etc/issue.net 
+
+    # INSTALLING IPS
+
+    - name: Installing Snort
+      package: 
+        name: snort
+        state: latest
+    
+    - name: Starting Snort service
+      systemd:
+        name: snort
+        state: started
+  
+    - name: Enabling Snort service
+      systemd:
+        name: snort
+        state: enabled
+      ignore_errors: true
+
+
+    # CA WITH SSL
+    - name: Installing openssl
+      apt: 
+        name: openssl
+ 
+    - name: Creating folder for CA
+      file: 
+        path: "/{{ item }}"
+        state: directory  
+      with_items:
+        - ca
+        - ca/certs
+        - ca/newcerts
+        - ca/private
+
+    - name: Creating index.txt
+      shell: touch /ca/index.txt
+
+    - name: Duplicating openssl.cnf
+      copy: 
+        src: /etc/ssl/openssl.cnf
+        dest: /ca/openssl.ca.cnf
+
+    - name: Generating private key
+      community.crypto.openssl_privatekey:
+        path: /ca/private/ca.key
+        size: 2048
+        type: RSA
+
+    - name: Generating certificate signing request
+      openssl_certificate:
+        path: /ca/ca.csr
+        privatekey_path: /ca/private/ca.key
+        provider: selfsigned  
+
+    - name: Generating selfsigned certificate
+      openssl_certificate: 
+        provider: selfsigned
+        path: /ca/certs/cert.crt
+        privatekey_path: /ca/private/ca.key
+        selfsigned_not_after: "+3650d"
+        mode: 0644
+
+    # COLLECTING LOG FILES
+    - name: Creating folder in control node
+      file:
+        path: /home/papzi/Desktop/ansibles/CPE-243_final_skills/client_ubuntu/logs/
+        state: directory
+
+    - name: Copying log files
+      fetch:
+        src: "/var/log/{{ item }}"
+        dest: /home/papzi/Desktop/ansibles/CPE-243_final_skills/client_ubuntu/logs/
+        flat: yes
+      with_items:
+        - alternatives.log
+        - auth.log
+        - bootstrap.log
+        - btmp
+        - dpkg.log
+        - faillog
+        - fontconfig.log
+        - gpu-manager.log
+        - kern.log
+        - lastlog
+        - syslog
+        - syslog.1
+        - tallylog
+        - ubuntu-advantage.log
+        - ubuntu-advantage-timer.log
+        - vboxpostinstall.log
+        - wtmp
+
+  handlers: 
+    - name: Reload SSH 
+      service: 
+        name: sshd 
+        state: reloaded 
